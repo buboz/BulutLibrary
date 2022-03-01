@@ -24,17 +24,17 @@ public class BookServiceImpl implements BookService{
     }
 
     @Override
-    public Book getBooksByGenre(String bookGenre) {
-        return bookRepository.getBooksByGenre(bookGenre);
+    public Book getBooksByGenre(String genre) {
+        return bookRepository.getBooksByGenre(genre);
     }
 
     @Override
-    public Book getBooksByAuthor(String bookAuthor) {
-        return bookRepository.getBooksByAuthor(bookAuthor);
+    public Book getBooksByAuthor(String author) {
+        return bookRepository.getBooksByAuthor(author);
     }
 
     @Override
-    public Book getBookByName(String bookName) {
-        return bookRepository.getBookByName(bookName);
+    public Book getBookByName(String name) {
+        return bookRepository.getBookByName(name);
     }
 }

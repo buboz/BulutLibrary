@@ -1,13 +1,22 @@
 package com.example.booklibrary.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
 @Entity
 public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int bookId;
+    private int id;
 
     @Column
     private String name;
@@ -15,39 +24,4 @@ public class Book {
     private String author;
     @Column
     private String genre;
-
-    public Book() {
-    }
-
-    public int getBookId() {
-        return bookId;
-    }
-
-    public void setBookId(int bookId) {
-        this.bookId = bookId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String bookName) {
-        this.name = bookName;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String bookAuthor) {
-        this.author = bookAuthor;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String bookGenre) {
-        this.genre = bookGenre;
-    }
 }

@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/book")
 public class BookController {
 
     @Autowired
@@ -25,18 +24,18 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
-    @GetMapping("/books/bookGenre/{bookGenre}")
-    public Book getBooksByGenre(@PathVariable("bookGenre") String bookGenre){
+    @GetMapping("/books/genre/{genre}")
+    public Book getBooksByGenre(@PathVariable("genre") String bookGenre){
         return bookService.getBooksByGenre(bookGenre);
     }
 
-    @GetMapping("/books/bookAuthor/{bookAuthor}")
-    public Book getBooksByAuthor(@PathVariable("bookAuthor") String bookAuthor){
+    @GetMapping("/books/author/{author}")
+    public Book getBooksByAuthor(@PathVariable("author") String bookAuthor){
         return bookService.getBooksByAuthor(bookAuthor);
     }
 
-    @GetMapping("/books/bookName/{bookName}")
-    public Book getBookByName(@PathVariable("bookName") String bookName){
+    @GetMapping("/books/name/{name}")
+    public Book getBookByName(@PathVariable("name") String bookName){
         return bookService.getBookByName(bookName);
     }
 
